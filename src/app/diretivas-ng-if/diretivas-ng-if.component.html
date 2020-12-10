@@ -1,0 +1,57 @@
+<h5>ngIF</h5>
+
+<div *ngIf="cursos.length > 0">Lista de Cursos: {{cursos}}</div>
+<div *ngIf="cursos.length == 0">Não existe cursos</div>
+
+<div *ngIf="mostrarCurso">Lista de Cursos: {{mostrarCurso}}</div>
+<div *ngIf="!mostrarCurso">Não existe cursos</div>
+
+<br><br>
+<button (click)="onMostrarCurso()">Mostrar Curso</button>
+
+
+<h1>
+    <i class="glyphicon" [ngClass]="{'glyphicon-star-empty':!meuFavorito, 'glyphicon-star': meuFavorito}" (click)="onClick()">
+
+    </i>
+</h1>
+
+<h1>
+    <i class="glyphicon" [class.glyphicon-star-empty]="!meuFavorito" [class.glyphicon-star]="meuFavorito" (click)="onClick()">
+
+    </i>
+</h1>
+
+
+<ul class="collapsible">
+    <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function() {
+        $('.collapsible').collapsible();
+    });
+</script>
+
+<!-- <ul>
+    <li *ngFor="let namos of namo">
+        <b>{{namos}}</b>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let amor of namo2, let i = index">
+        <b>{{i}}{{amor}}</b>
+    </li>
+</ul> -->

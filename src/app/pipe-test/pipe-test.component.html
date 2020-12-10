@@ -1,0 +1,19 @@
+<p>Anime: {{anime.anime | uppercase | camelCase}}</p>
+<p>Personagens: {{anime.personagens}}</p>
+<p>Número de Episódios: {{anime.nEpisodio}}</p>
+<p>Descrição: {{anime.descricao}}</p>
+<p>Nota: {{anime.nota | number:'1.1-1'}}</p>
+<p>Data Lançamento: {{anime.dataLancamento | date}}</p>
+<p>Link: {{anime.url}}</p>
+<br>
+<p>Anime: {{anime | json}}</p>
+
+<ul>
+    <li *ngFor=" let anime of animeLista">{{anime}}</li>
+</ul>
+
+<mat-list>
+    <mat-list-item *ngFor="let anime of animeLista">{{anime | filtroArray}} </mat-list-item>
+</mat-list>
+
+<p>{{valorAsync | async}}</p>

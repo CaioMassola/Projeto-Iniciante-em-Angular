@@ -1,0 +1,12 @@
+<p appFundoAmarelo>Texto com Fundo Amarelo</p>
+
+<p appHightlightMouse>Texto com HightLight mouse</p>
+
+<p appHighlight2>Texto com cores personalizadas</p>
+
+
+<div *ngIf="mostrarCurso">Lista de Cursos: {{mostrarCurso}}</div>
+<div *appNgElse="mostrarCurso">Não existe cursos</div>
+
+<br><br>
+<button (click)="onMostrarCurso()">Mostrar Curso</button>
